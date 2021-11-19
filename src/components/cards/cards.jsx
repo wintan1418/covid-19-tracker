@@ -1,6 +1,9 @@
 import React from 'react';
+import {Card, CardContent, Typography, Grid} from '@material-ui/core';
+const Cards = (props) => {
+ 
+ console.log(props);
 
-const Cards = () => {
   return (
     <h1>cards</h1>
   )
