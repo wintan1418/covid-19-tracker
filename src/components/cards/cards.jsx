@@ -23,24 +23,24 @@ const Cards = ({ data:{confirmed, recovered,deaths,lastUpdate}}) => {
             <Typography variant="body2">Number of active Covid-19 cases</Typography>
           </CardContent>
          </Grid> 
-         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)} >
+         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)} >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>Deaths</Typography>
+            <Typography color="textSecondary" gutterBottom>Recovered</Typography>
             <Typography variant="h5">
               <CountUp start={0} end={recovered.value} duration={2.5} seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Number of deaths</Typography>
+            <Typography variant="body2">Number of Recovered</Typography>
           </CardContent>
          </Grid> 
-         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)} >
+         <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)} >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>Recovered</Typography>
+            <Typography color="textSecondary" gutterBottom>Deaths</Typography>
             <Typography variant="h5">
               <CountUp start={0} end={deaths.value} duration={2.5} seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Number of active Covid-19 cases</Typography>
+            <Typography variant="body2">Number of deaths</Typography>
           </CardContent>
          </Grid> 
       </Grid>
