@@ -5,7 +5,7 @@ import styles from './cards.module.css'
 import CountUp from 'react-countup';
 import cx from 'classnames'
 
-const Cards = ({ data: { confirmed, recovered, deaths,lastUpdate}}) => {
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate}}) => {
 
   if(!confirmed) {
     return 'loading....';
@@ -28,7 +28,7 @@ const Cards = ({ data: { confirmed, recovered, deaths,lastUpdate}}) => {
           <CardContent>
             <Typography color="textSecondary" gutterBottom>Recovered ones</Typography>
             <Typography variant="h5">
-              <CountUp start={0} end={deaths.value} duration={2.5} seperator="," />
+              <CountUp start={0} end={recovered.value} duration={2.5} seperator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
             <Typography variant="body2">Number of Recovered</Typography>
